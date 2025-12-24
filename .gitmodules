@@ -1,0 +1,12 @@
+[submodule "AuthService"]
+	path = AuthService
+	url = https://github.com/kietjune2003/DaLieuBackend.git
+[submodule "Skin_Analyzer_Microservices"]
+	path = Skin_Analyzer_Microservices
+	url = https://github.com/denghwee/Skin_Analyzer_Microservices.git
+[submodule "Food_Detection_Microservices"]
+	path = Food_Detection_Microservices
+	url = https://github.com/denghwee/Food_Detection_Microservices.git
+[submodule "Fitness_Coach_AI"]
+	path = Fitness_Coach_AI
+	url = https://github.com/denghwee/Fitness_Coach_AI.git
