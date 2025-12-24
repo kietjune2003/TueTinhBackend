@@ -1,0 +1,71 @@
+version: "3.9"
+
+services:
+
+  # ================= API GATEWAY =================
+  gateway:
+    build: ./gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - drug-service
+      - skin-service
+      - food-service
+      - chatbot-service
+    environment:
+      SERVER_PORT: 8080
+    networks:
+      - backend-net
+
+  # ================= SPRING BOOT SERVICE =================
+  drug-service:
+    build: ./AuthService
+    container_name: drug-service
+    ports:
+      - "8081:8081"
+    environment:
+      SERVER_PORT: 8081
+      SPRING_PROFILES_ACTIVE: default
+    networks:
+      - backend-net
+
+  # ================= FLASK SKIN AI =================
+  skin-service:
+    build: ./Skin_Analyzer_Microservices
+    container_name: skin-service
+    ports:
+      - "5001:5001"
+    environment:
+      FLASK_PORT: 5001
+      DEBUG: "true"
+    networks:
+      - backend-net
+
+  # ================= FLASK FOOD CALO =================
+  food-service:
+    build: ./Food_Detection_Microservices
+    container_name: food-service
+    ports:
+      - "5002:5002"
+    environment:
+      FLASK_PORT: 5002
+      DEBUG: "true"
+    networks:
+      - backend-net
+
+  # ================= FLASK CHATBOT =================
+  chatbot-service:
+    build: ./Fitness_Coach_AI
+    container_name: chatbot-service
+    ports:
+      - "5003:5003"
+    environment:
+      FLASK_PORT: 5003
+      DEBUG: "true"
+    networks:
+      - backend-net
+
+networks:
+  backend-net:
+    driver: bridge
