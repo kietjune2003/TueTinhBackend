@@ -206,7 +206,35 @@ git commit -m "Update Fitness_Coach_AI submodule"
 
 [Thêm license của bạn ở đây]
 
-## 👥 Authors
+## 👥 Authors & Responsibilities
+
+### **denghwee** – AI & Microservices Lead  
+**Vai trò chính**:
+- Thiết kế và phát triển các **AI microservices**:
+  - Fitness_Coach_AI (LLM, RAG, LangChain, ChromaDB)
+  - Skin_Analyzer_Microservices (phân tích da bằng DL)
+  - Food_Detection_Microservices (computer vision, nhận diện thực phẩm)
+- Xây dựng và huấn luyện **mô hình AI/DL**
+- Thiết kế pipeline xử lý dữ liệu, inference và REST API cho các service AI
+- Tối ưu hiệu năng, độ chính xác mô hình và khả năng scale của các Python services
+
+**Chuyên môn**: AI/DL, LLM, Computer Vision, Flask Microservices
+
+- **denghwee** - [GitHub](https://github.com/denghwee)
+
+---
+
+### **kietjune2003** – Backend & System Architect  
+**Vai trò chính**:
+- Thiết kế và phát triển **Java Backend** cho toàn hệ thống:
+  - API Gateway (routing, authentication, authorization)
+  - AuthService (JWT, user management, security)
+- Thiết kế **kiến trúc microservices tổng thể**
+- Tích hợp các AI services vào hệ thống backend
+- Quản lý **Docker Compose orchestration**, networking, ports
+- Thiết kế API contract giữa Gateway và các microservices
+
+**Chuyên môn**: Java, Spring Boot, Distributed Systems, Security, System Architecture
 
 - **kietjune2003** - [GitHub](https://github.com/kietjune2003)
 
